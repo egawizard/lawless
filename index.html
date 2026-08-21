@@ -3,61 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>LAWLESS // No Rules. Just Lore.</title>
-  <meta name="description" content="LAWLESS — brutal meme token / community project landing page." />
+
+  <meta
+    name="description"
+    content="LAWLESS — a meme-powered outlaw community. No rules. Just lore."
+  />
+
   <style>
     :root{
       --bg:#050505;
       --bg2:#0b0b0d;
       --panel:#0f1014;
       --panel2:#14161b;
+
       --line:rgba(255,255,255,.09);
       --soft:rgba(255,255,255,.05);
+
       --text:#f5f3ef;
-      --muted:#b1abbf;
+      --muted:#aca7b8;
+
       --gold:#ffd166;
       --red:#ff4d6d;
       --cyan:#3cefff;
       --lime:#c6ff4d;
+
       --shadow:0 24px 80px rgba(0,0,0,.55);
+
       --radius:24px;
       --radius-sm:18px;
     }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
       color:var(--text);
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
       background:
-        radial-gradient(circle at 20% 10%, rgba(255,77,109,.11), transparent 25%),
-        radial-gradient(circle at 80% 0%, rgba(60,239,255,.09), transparent 20%),
-        radial-gradient(circle at 60% 90%, rgba(255,209,102,.08), transparent 20%),
-        linear-gradient(180deg, #050505 0%, #09090b 100%);
+        radial-gradient(
+          circle at 20% 10%,
+          rgba(255,77,109,.11),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 80% 0%,
+          rgba(60,239,255,.09),
+          transparent 20%
+        ),
+        radial-gradient(
+          circle at 60% 90%,
+          rgba(255,209,102,.08),
+          transparent 20%
+        ),
+        linear-gradient(
+          180deg,
+          #050505 0%,
+          #09090b 100%
+        );
+
       overflow-x:hidden;
     }
 
-    h1,h2,h3,h4,.display,.impact,.badge{
-      font-family:Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    h1,
+    h2,
+    h3,
+    h4,
+    .display,
+    .impact,
+    .badge{
+      font-family:
+        Impact,
+        Haettenschweiler,
+        "Arial Narrow Bold",
+        sans-serif;
+
       letter-spacing:.03em;
       text-transform:uppercase;
     }
 
-    a{color:inherit;text-decoration:none}
-    img{display:block;max-width:100%;user-select:none;-webkit-user-drag:none}
-    button,input{font:inherit}
-    .container{width:min(1220px, calc(100% - 28px));margin-inline:auto}
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+      user-select:none;
+      -webkit-user-drag:none;
+    }
+
+    button,
+    input{
+      font:inherit;
+    }
+
+    button{
+      border:0;
+    }
+
+    .container{
+      width:min(1220px, calc(100% - 28px));
+      margin-inline:auto;
+    }
+
+    /* BACKGROUND */
 
     .grid-bg{
       position:fixed;
       inset:0;
       pointer-events:none;
+
       background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+        linear-gradient(
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        );
+
       background-size:36px 36px;
-      mask-image:linear-gradient(180deg, rgba(0,0,0,.85), transparent 92%);
+
+      mask-image:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.85),
+          transparent 92%
+        );
+
       z-index:0;
     }
 
@@ -65,13 +158,30 @@
       position:fixed;
       inset:0;
       pointer-events:none;
+
       opacity:.055;
+
       background-image:
-        radial-gradient(circle at 25% 25%, #fff 0 1px, transparent 1.2px),
-        radial-gradient(circle at 75% 30%, #fff 0 1px, transparent 1.2px),
-        radial-gradient(circle at 60% 70%, #fff 0 1px, transparent 1.2px);
+        radial-gradient(
+          circle at 25% 25%,
+          #fff 0 1px,
+          transparent 1.2px
+        ),
+        radial-gradient(
+          circle at 75% 30%,
+          #fff 0 1px,
+          transparent 1.2px
+        ),
+        radial-gradient(
+          circle at 60% 70%,
+          #fff 0 1px,
+          transparent 1.2px
+        );
+
       background-size:120px 120px;
+
       mix-blend-mode:soft-light;
+
       z-index:1;
     }
 
@@ -79,29 +189,51 @@
       position:fixed;
       inset:0;
       pointer-events:none;
-      background:linear-gradient(180deg, rgba(255,255,255,.035) 0, rgba(255,255,255,0) 2px);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.035) 0,
+          rgba(255,255,255,0) 2px
+        );
+
       background-size:100% 4px;
+
       opacity:.06;
+
       z-index:2;
     }
 
     .flash{
       position:fixed;
       inset:0;
+
       background:rgba(255,255,255,.07);
+
       opacity:0;
       pointer-events:none;
+
       transition:opacity .18s ease;
+
       z-index:999;
     }
-    .flash.show{opacity:1}
+
+    .flash.show{
+      opacity:1;
+    }
+
+    /* NAVBAR */
 
     .topbar{
       position:sticky;
       top:0;
+
       z-index:100;
+
       backdrop-filter:blur(16px);
+
       background:rgba(5,5,5,.78);
+
       border-bottom:1px solid var(--line);
     }
 
@@ -109,24 +241,38 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
+
       gap:18px;
+
       padding:14px 0;
     }
 
     .brand{
       display:flex;
       align-items:center;
+
       gap:12px;
     }
 
     .brand-logo{
       width:48px;
       height:48px;
+
       border-radius:12px;
-      background:linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.07),
+          rgba(255,255,255,.02)
+        );
+
       border:1px solid var(--line);
+
       box-shadow:var(--shadow);
+
       padding:5px;
+
       object-fit:contain;
     }
 
@@ -136,765 +282,1702 @@
 
     .brand-title strong{
       display:block;
+
       font-size:1.7rem;
       letter-spacing:.06em;
     }
 
     .brand-title span{
       display:block;
+
       color:var(--gold);
+
       font-size:.75rem;
+
       letter-spacing:.22em;
+
       text-transform:uppercase;
+
       margin-top:5px;
     }
 
     .nav-links{
       display:flex;
       gap:10px;
+
       flex-wrap:wrap;
+
       justify-content:flex-end;
     }
 
     .nav-links a{
       padding:10px 14px;
+
       border-radius:999px;
+
       color:var(--muted);
+
       font-size:.94rem;
+
       border:1px solid transparent;
+
       transition:.2s ease;
     }
+
     .nav-links a:hover{
       color:var(--text);
+
       border-color:var(--line);
+
       background:rgba(255,255,255,.03);
+
       transform:translateY(-1px);
     }
 
+    /* HERO */
+
     .hero{
       position:relative;
+
       padding:50px 0 26px;
+
       z-index:3;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.03fr .97fr;
+
+      grid-template-columns:
+        1.03fr
+        .97fr;
+
       gap:24px;
+
       align-items:center;
     }
 
     .eyebrow{
       display:inline-flex;
+
       align-items:center;
+
       gap:8px;
+
       padding:10px 14px;
+
       border-radius:999px;
-      border:1px solid rgba(255,209,102,.18);
-      background:rgba(255,209,102,.08);
+
+      border:
+        1px solid
+        rgba(255,209,102,.18);
+
+      background:
+        rgba(255,209,102,.08);
+
       color:#ffe7a7;
+
       font-size:.8rem;
+
       letter-spacing:.16em;
+
       text-transform:uppercase;
-      box-shadow:0 0 0 1px rgba(255,209,102,.05) inset;
+
+      box-shadow:
+        0 0 0 1px
+        rgba(255,209,102,.05)
+        inset;
     }
 
     .glitch{
       position:relative;
+
       display:inline-block;
+
       margin:18px 0 12px;
-      font-size:clamp(3.4rem, 10vw, 7.6rem);
+
+      font-size:
+        clamp(
+          3.4rem,
+          10vw,
+          7.6rem
+        );
+
       line-height:.88;
+
       letter-spacing:.03em;
+
       text-transform:uppercase;
-      text-shadow:0 4px 0 rgba(255,255,255,.06);
+
+      text-shadow:
+        0 4px 0
+        rgba(255,255,255,.06);
     }
 
     .glitch::before,
     .glitch::after{
       content:attr(data-text);
+
       position:absolute;
+
       inset:0;
+
       pointer-events:none;
     }
 
     .glitch::before{
-      color:rgba(60,239,255,.8);
-      transform:translate(2px,0);
-      clip-path:polygon(0 0,100% 0,100% 42%,0 42%);
+      color:
+        rgba(
+          60,
+          239,
+          255,
+          .8
+        );
+
+      transform:
+        translate(2px,0);
+
+      clip-path:
+        polygon(
+          0 0,
+          100% 0,
+          100% 42%,
+          0 42%
+        );
+
       mix-blend-mode:screen;
-      animation:glitch1 2.2s infinite linear alternate-reverse;
+
+      animation:
+        glitch1
+        2.2s
+        infinite
+        linear
+        alternate-reverse;
     }
+
     .glitch::after{
-      color:rgba(255,77,109,.8);
-      transform:translate(-2px,0);
-      clip-path:polygon(0 60%,100% 60%,100% 100%,0 100%);
+      color:
+        rgba(
+          255,
+          77,
+          109,
+          .8
+        );
+
+      transform:
+        translate(-2px,0);
+
+      clip-path:
+        polygon(
+          0 60%,
+          100% 60%,
+          100% 100%,
+          0 100%
+        );
+
       mix-blend-mode:screen;
-      animation:glitch2 2s infinite linear alternate-reverse;
+
+      animation:
+        glitch2
+        2s
+        infinite
+        linear
+        alternate-reverse;
     }
 
     @keyframes glitch1{
-      0%{transform:translate(2px,0)}
-      20%{transform:translate(-2px,1px)}
-      40%{transform:translate(3px,-1px)}
-      60%{transform:translate(-3px,0)}
-      80%{transform:translate(2px,1px)}
-      100%{transform:translate(0,0)}
+      0%{
+        transform:
+          translate(2px,0);
+      }
+
+      20%{
+        transform:
+          translate(-2px,1px);
+      }
+
+      40%{
+        transform:
+          translate(3px,-1px);
+      }
+
+      60%{
+        transform:
+          translate(-3px,0);
+      }
+
+      80%{
+        transform:
+          translate(2px,1px);
+      }
+
+      100%{
+        transform:
+          translate(0,0);
+      }
     }
+
     @keyframes glitch2{
-      0%{transform:translate(-2px,0)}
-      20%{transform:translate(1px,-1px)}
-      40%{transform:translate(-3px,1px)}
-      60%{transform:translate(2px,0)}
-      80%{transform:translate(-1px,-1px)}
-      100%{transform:translate(0,0)}
+      0%{
+        transform:
+          translate(-2px,0);
+      }
+
+      20%{
+        transform:
+          translate(1px,-1px);
+      }
+
+      40%{
+        transform:
+          translate(-3px,1px);
+      }
+
+      60%{
+        transform:
+          translate(2px,0);
+      }
+
+      80%{
+        transform:
+          translate(-1px,-1px);
+      }
+
+      100%{
+        transform:
+          translate(0,0);
+      }
     }
 
     .lead{
       max-width:640px;
+
       color:var(--muted);
+
       font-size:1.05rem;
+
       line-height:1.85;
+
       margin:0 0 18px;
     }
 
     .hero-pills{
       display:flex;
+
       flex-wrap:wrap;
+
       gap:10px;
+
       margin:18px 0 0;
     }
 
     .pill{
       padding:10px 12px;
+
       border-radius:999px;
+
       border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+
+      background:
+        rgba(255,255,255,.03);
+
       color:#ddd7e3;
+
       font-size:.82rem;
+
       text-transform:uppercase;
+
       letter-spacing:.12em;
     }
 
     .hero-actions{
       display:flex;
+
       gap:12px;
+
       flex-wrap:wrap;
+
       margin-top:24px;
     }
 
     .btn{
       appearance:none;
-      border:none;
+
       cursor:pointer;
+
       padding:15px 20px;
+
       border-radius:16px;
+
       font-weight:900;
+
       letter-spacing:.09em;
+
       text-transform:uppercase;
+
       transition:.2s ease;
+
       position:relative;
+
       overflow:hidden;
     }
 
     .btn.primary{
       color:#0a0a0a;
-      background:linear-gradient(135deg, #fff, #ffd166);
-      box-shadow:0 14px 35px rgba(255,209,102,.16);
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff,
+          #ffd166
+        );
+
+      box-shadow:
+        0 14px 35px
+        rgba(255,209,102,.16);
     }
 
     .btn.primary:hover{
-      transform:translateY(-2px) scale(1.01);
-      box-shadow:0 18px 40px rgba(255,209,102,.22);
+      transform:
+        translateY(-2px)
+        scale(1.01);
+
+      box-shadow:
+        0 18px 40px
+        rgba(255,209,102,.22);
     }
 
     .btn.secondary{
       color:var(--text);
-      background:linear-gradient(145deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
-      border:1px solid var(--line);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.02)
+        );
+
+      border:
+        1px solid
+        var(--line);
     }
+
     .btn.secondary:hover{
-      transform:translateY(-2px);
-      border-color:rgba(255,255,255,.16);
+      transform:
+        translateY(-2px);
+
+      border-color:
+        rgba(255,255,255,.16);
     }
 
     .btn.chaos{
       color:white;
-      background:linear-gradient(135deg, rgba(255,77,109,.95), rgba(60,239,255,.92));
-      box-shadow:0 16px 42px rgba(255,77,109,.18);
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(255,77,109,.95),
+          rgba(60,239,255,.92)
+        );
+
+      box-shadow:
+        0 16px 42px
+        rgba(255,77,109,.18);
+    }
+
+    .btn.disabled{
+      cursor:default;
+
+      opacity:.7;
     }
 
     .hero-note{
       margin-top:14px;
+
       min-height:22px;
+
       color:#f8dcc9;
+
       font-size:.95rem;
     }
 
+    /* HERO ART */
+
     .hero-art{
       position:relative;
+
       min-height:660px;
+
       display:flex;
+
       align-items:center;
+
       justify-content:center;
     }
 
     .main-card{
-      width:min(560px, 100%);
+      width:
+        min(
+          560px,
+          100%
+        );
+
       border-radius:32px;
+
       padding:18px;
+
       background:
-        linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02)),
-        linear-gradient(180deg, #101116, #09090c);
-      border:1px solid rgba(255,255,255,.09);
-      box-shadow:var(--shadow);
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.06),
+          rgba(255,255,255,.02)
+        ),
+        linear-gradient(
+          180deg,
+          #101116,
+          #09090c
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.09);
+
+      box-shadow:
+        var(--shadow);
+
       position:relative;
+
       overflow:hidden;
+
       isolation:isolate;
-      transform:rotate(-2deg);
+
+      transform:
+        rotate(-2deg);
     }
 
     .main-card::before{
-      content:"LAWLESS // MOST WANTED";
+      content:
+        "LAWLESS // MOST WANTED";
+
       position:absolute;
+
       top:14px;
       right:18px;
-      color:rgba(255,255,255,.08);
-      font-family:Impact, sans-serif;
+
+      color:
+        rgba(255,255,255,.08);
+
+      font-family:
+        Impact,
+        sans-serif;
+
       letter-spacing:.2em;
+
       font-size:.95rem;
-      transform:rotate(7deg);
+
+      transform:
+        rotate(7deg);
+
       z-index:0;
     }
 
     .card-head{
       position:relative;
+
       z-index:2;
+
       display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
+
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
       gap:12px;
+
       margin-bottom:12px;
     }
 
     .card-head h3{
       margin:0;
+
       font-size:2rem;
+
       line-height:.95;
     }
 
     .card-head p{
       margin:6px 0 0;
+
       color:var(--muted);
+
       font-size:.92rem;
     }
 
     .stamp{
       padding:9px 12px;
+
       border-radius:14px;
-      border:2px dashed rgba(255,77,109,.35);
+
+      border:
+        2px dashed
+        rgba(255,77,109,.35);
+
       color:#ff9ab0;
-      background:rgba(255,77,109,.08);
+
+      background:
+        rgba(255,77,109,.08);
+
       font-size:.76rem;
+
       letter-spacing:.14em;
-      transform:rotate(8deg);
+
+      transform:
+        rotate(8deg);
+
       white-space:nowrap;
     }
 
     .hero-character{
       width:100%;
+
       aspect-ratio:1/1;
+
       object-fit:contain;
-      filter:drop-shadow(0 24px 50px rgba(0,0,0,.5));
+
+      filter:
+        drop-shadow(
+          0 24px 50px
+          rgba(0,0,0,.5)
+        );
+
       position:relative;
+
       z-index:2;
     }
 
     .info-grid{
       position:relative;
+
       z-index:2;
+
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+
+      grid-template-columns:
+        repeat(3,1fr);
+
       gap:10px;
+
       margin-top:12px;
     }
 
     .info-box{
       padding:12px;
+
       border-radius:16px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.07);
+
+      background:
+        rgba(255,255,255,.04);
+
+      border:
+        1px solid
+        rgba(255,255,255,.07);
+
       min-height:92px;
     }
 
     .info-box span{
       display:block;
+
       color:var(--muted);
+
       font-size:.75rem;
+
       text-transform:uppercase;
+
       letter-spacing:.14em;
+
       margin-bottom:7px;
     }
 
     .info-box strong{
       font-size:1rem;
+
       line-height:1.2;
+
       text-transform:uppercase;
     }
 
+    /* FLOATING CHARACTER CARDS */
+
     .floating-card{
       position:absolute;
+
       width:170px;
+
       border-radius:22px;
+
       padding:12px;
-      background:linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.1);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(12px);
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.08),
+          rgba(255,255,255,.02)
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.1);
+
+      box-shadow:
+        var(--shadow);
+
+      backdrop-filter:
+        blur(12px);
+
       z-index:3;
-      animation:floaty 5s ease-in-out infinite;
+
+      animation:
+        floaty
+        5s
+        ease-in-out
+        infinite;
     }
 
     .floating-card img{
       width:100%;
+
       aspect-ratio:1/1;
+
       object-fit:contain;
     }
 
     .floating-card small{
       display:block;
+
       margin-top:8px;
+
       font-weight:800;
+
       letter-spacing:.14em;
+
       text-transform:uppercase;
+
       color:#eee0c6;
+
       text-align:center;
+
       font-size:.72rem;
     }
 
-    .fc1{top:30px; left:-8px; transform:rotate(-12deg)}
-    .fc1 img{filter:grayscale(1) contrast(1.12)}
-    .fc2{bottom:45px; right:-12px; transform:rotate(10deg); animation-delay:-1.4s}
-    .fc2 img{filter:sepia(.35) contrast(1.08) saturate(1.08)}
-    .fc3{top:230px; right:-50px; width:145px; transform:rotate(-8deg); animation-delay:-2.1s}
-    .fc3 img{filter:hue-rotate(-10deg) saturate(1.12)}
-    .fc4{bottom:140px; left:-42px; width:145px; transform:rotate(8deg); animation-delay:-.6s}
-    .fc4 img{filter:brightness(.95) contrast(1.12)}
+    .fc1{
+      top:30px;
+      left:-8px;
+
+      --r:-12deg;
+    }
+
+    .fc1 img{
+      filter:
+        grayscale(1)
+        contrast(1.12);
+    }
+
+    .fc2{
+      bottom:45px;
+      right:-12px;
+
+      --r:10deg;
+
+      animation-delay:-1.4s;
+    }
+
+    .fc2 img{
+      filter:
+        sepia(.35)
+        contrast(1.08)
+        saturate(1.08);
+    }
+
+    .fc3{
+      top:230px;
+      right:-50px;
+
+      width:145px;
+
+      --r:-8deg;
+
+      animation-delay:-2.1s;
+    }
+
+    .fc3 img{
+      filter:
+        hue-rotate(-10deg)
+        saturate(1.12);
+    }
+
+    .fc4{
+      bottom:140px;
+      left:-42px;
+
+      width:145px;
+
+      --r:8deg;
+
+      animation-delay:-.6s;
+    }
+
+    .fc4 img{
+      filter:
+        brightness(.95)
+        contrast(1.12);
+    }
 
     @keyframes floaty{
-      0%,100%{transform:translateY(0) rotate(var(--r, 0deg))}
-      50%{transform:translateY(-10px) rotate(calc(var(--r, 0deg) + 1deg))}
+      0%,
+      100%{
+        transform:
+          translateY(0)
+          rotate(var(--r,0deg));
+      }
+
+      50%{
+        transform:
+          translateY(-10px)
+          rotate(
+            calc(
+              var(--r,0deg)
+              + 1deg
+            )
+          );
+      }
     }
-    .fc1{--r:-12deg}
-    .fc2{--r:10deg}
-    .fc3{--r:-8deg}
-    .fc4{--r:8deg}
+
+    /* TICKER */
 
     .ticker-wrap{
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-      background:rgba(255,255,255,.03);
+      border-top:
+        1px solid
+        var(--line);
+
+      border-bottom:
+        1px solid
+        var(--line);
+
+      background:
+        rgba(255,255,255,.03);
+
       overflow:hidden;
+
       margin-top:24px;
     }
 
     .ticker{
       display:flex;
+
       gap:38px;
+
       white-space:nowrap;
+
       min-width:max-content;
+
       padding:13px 0;
-      animation:marquee 18s linear infinite;
+
+      animation:
+        marquee
+        18s
+        linear
+        infinite;
+
       color:#efe6d2;
+
       font-size:.84rem;
+
       letter-spacing:.18em;
+
       text-transform:uppercase;
+
       font-weight:900;
     }
+
     @keyframes marquee{
-      from{transform:translateX(0)}
-      to{transform:translateX(-50%)}
+      from{
+        transform:
+          translateX(0);
+      }
+
+      to{
+        transform:
+          translateX(-50%);
+      }
     }
+
+    /* SECTIONS */
 
     section{
       position:relative;
+
       z-index:3;
+
       padding:72px 0;
     }
 
     .section-head{
       display:flex;
-      justify-content:space-between;
+
+      justify-content:
+        space-between;
+
       align-items:end;
+
       gap:20px;
+
       flex-wrap:wrap;
+
       margin-bottom:28px;
     }
 
     .tag{
       color:var(--gold);
+
       font-size:.8rem;
+
       letter-spacing:.18em;
+
       text-transform:uppercase;
+
       margin-bottom:10px;
-      font-family:Impact, sans-serif;
+
+      font-family:
+        Impact,
+        sans-serif;
     }
 
     .title{
       margin:0;
-      font-size:clamp(2.1rem, 5vw, 4rem);
+
+      font-size:
+        clamp(
+          2.1rem,
+          5vw,
+          4rem
+        );
+
       line-height:.92;
+
       text-transform:uppercase;
     }
 
     .desc{
       max-width:620px;
+
       color:var(--muted);
+
       line-height:1.8;
     }
 
+    /* TOKEN METRICS */
+
     .stats{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+
+      grid-template-columns:
+        repeat(4,1fr);
+
       gap:16px;
     }
 
     .stat{
       padding:22px;
+
       border-radius:22px;
-      border:1px solid rgba(255,255,255,.08);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
       background:
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
-        linear-gradient(180deg, #101217, #0a0b0e);
-      box-shadow:var(--shadow);
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.02)
+        ),
+        linear-gradient(
+          180deg,
+          #101217,
+          #0a0b0e
+        );
+
+      box-shadow:
+        var(--shadow);
+
       position:relative;
+
       overflow:hidden;
     }
 
     .stat::after{
       content:"//";
+
       position:absolute;
+
       right:16px;
       bottom:6px;
-      font-family:Impact, sans-serif;
+
+      font-family:
+        Impact,
+        sans-serif;
+
       font-size:3rem;
-      color:rgba(255,255,255,.05);
+
+      color:
+        rgba(255,255,255,.05);
     }
 
     .stat h3{
       margin:0 0 10px;
+
       color:var(--muted);
+
       font-size:.8rem;
+
       letter-spacing:.16em;
+
       text-transform:uppercase;
     }
 
     .stat strong{
       display:block;
+
       font-size:2.35rem;
+
       line-height:1;
+
       text-transform:uppercase;
     }
 
     .stat p{
       margin:8px 0 0;
+
       color:#d7cfde;
+
       font-size:.94rem;
+
       line-height:1.6;
     }
 
+    /* COMMAND CENTER */
+
     .command-grid{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
+
+      grid-template-columns:
+        1.05fr
+        .95fr;
+
       gap:18px;
     }
 
     .panel{
       border-radius:26px;
-      border:1px solid rgba(255,255,255,.08);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
       background:
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
-        linear-gradient(180deg, #101216, #0a0b0e);
-      box-shadow:var(--shadow);
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.02)
+        ),
+        linear-gradient(
+          180deg,
+          #101216,
+          #0a0b0e
+        );
+
+      box-shadow:
+        var(--shadow);
+
       padding:22px;
+
       overflow:hidden;
+
       position:relative;
     }
 
     .terminal{
       padding:18px;
+
       border-radius:18px;
+
       background:#06070a;
-      border:1px solid rgba(255,255,255,.06);
-      font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+      border:
+        1px solid
+        rgba(255,255,255,.06);
+
+      font-family:
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Consolas,
+        monospace;
+
       color:#d4f7ff;
-      min-height:260px;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.02);
+
+      min-height:280px;
+
+      max-height:360px;
+
+      overflow:auto;
+
+      box-shadow:
+        inset
+        0 0 0 1px
+        rgba(255,255,255,.02);
     }
 
     .terminal-line{
       margin-bottom:10px;
+
       line-height:1.7;
+
       color:#b9f6ff;
     }
 
-    .terminal-line .muted{color:#8f94a8}
-    .terminal-line .warn{color:#ffc670}
-    .terminal-line .err{color:#ff8ba3}
-    .terminal-line .ok{color:#bfff78}
+    .terminal-line .muted{
+      color:#8f94a8;
+    }
+
+    .terminal-line .warn{
+      color:#ffc670;
+    }
+
+    .terminal-line .err{
+      color:#ff8ba3;
+    }
+
+    .terminal-line .ok{
+      color:#bfff78;
+    }
 
     .command-actions{
       display:flex;
+
       gap:12px;
+
       flex-wrap:wrap;
+
       margin-top:16px;
     }
 
     .ca-box{
       display:flex;
+
+      align-items:center;
+
       flex-wrap:wrap;
+
       gap:10px;
+
       margin-top:18px;
+
       padding:14px;
+
       border-radius:18px;
-      border:1px dashed rgba(255,209,102,.18);
-      background:rgba(255,209,102,.05);
+
+      border:
+        1px dashed
+        rgba(255,209,102,.18);
+
+      background:
+        rgba(255,209,102,.05);
+    }
+
+    .ca-box .ca-label{
+      color:var(--muted);
+
+      font-size:.72rem;
+
+      text-transform:uppercase;
+
+      letter-spacing:.16em;
+
+      width:100%;
     }
 
     .ca-box code{
       flex:1 1 260px;
+
       min-width:0;
+
       color:#ffe6ad;
+
       word-break:break-all;
-      font-family:ui-monospace, monospace;
-      font-size:.95rem;
+
+      font-family:
+        ui-monospace,
+        monospace;
+
+      font-size:1rem;
+
+      font-weight:800;
     }
+
+    /* LAWLESS CODE */
 
     .laws{
       display:grid;
+
       gap:12px;
     }
 
     .law{
       display:flex;
+
       gap:14px;
+
       padding:16px;
+
       border-radius:18px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.03);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      background:
+        rgba(255,255,255,.03);
     }
 
     .law b{
       width:60px;
+
       flex:0 0 60px;
+
       color:var(--gold);
-      font-family:Impact, sans-serif;
+
+      font-family:
+        Impact,
+        sans-serif;
+
       font-size:1.6rem;
+
       line-height:1;
     }
 
     .law h4{
       margin:0 0 6px;
+
       font-size:1rem;
     }
 
     .law p{
       margin:0;
+
       color:var(--muted);
+
       line-height:1.7;
+
       font-size:.95rem;
     }
 
+    /* TOKEN DETAILS */
+
+    .token-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:16px;
+    }
+
+    .token-card{
+      position:relative;
+
+      overflow:hidden;
+
+      min-height:190px;
+
+      padding:22px;
+
+      border-radius:24px;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.02)
+        ),
+        linear-gradient(
+          180deg,
+          #111318,
+          #090a0d
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      box-shadow:
+        var(--shadow);
+    }
+
+    .token-card::before{
+      content:"LAWLESS";
+
+      position:absolute;
+
+      right:14px;
+      bottom:4px;
+
+      font-family:
+        Impact,
+        sans-serif;
+
+      font-size:3.2rem;
+
+      color:
+        rgba(255,255,255,.04);
+    }
+
+    .token-card span{
+      display:block;
+
+      color:var(--muted);
+
+      text-transform:uppercase;
+
+      letter-spacing:.16em;
+
+      font-size:.78rem;
+
+      margin-bottom:16px;
+    }
+
+    .token-card strong{
+      display:block;
+
+      font-family:
+        Impact,
+        sans-serif;
+
+      font-size:
+        clamp(
+          2rem,
+          4vw,
+          3rem
+        );
+
+      line-height:.95;
+
+      text-transform:uppercase;
+    }
+
+    .token-card p{
+      margin:14px 0 0;
+
+      color:#d3ccd9;
+
+      line-height:1.7;
+
+      max-width:320px;
+    }
+
+    /* CHARACTER GALLERY */
+
     .gallery{
       display:grid;
-      grid-template-columns:repeat(4,1fr);
+
+      grid-template-columns:
+        repeat(4,1fr);
+
       gap:16px;
     }
 
     .card{
       border-radius:24px;
+
       padding:16px;
-      border:1px solid rgba(255,255,255,.08);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
       background:
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
-        linear-gradient(180deg, #101216, #0a0b0e);
-      box-shadow:var(--shadow);
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.02)
+        ),
+        linear-gradient(
+          180deg,
+          #101216,
+          #0a0b0e
+        );
+
+      box-shadow:
+        var(--shadow);
+
       overflow:hidden;
+
       position:relative;
+
       min-height:380px;
     }
 
     .card::before{
       content:"LAWLESS";
+
       position:absolute;
+
       right:12px;
       bottom:8px;
-      color:rgba(255,255,255,.05);
-      font-family:Impact, sans-serif;
+
+      color:
+        rgba(255,255,255,.05);
+
+      font-family:
+        Impact,
+        sans-serif;
+
       font-size:3rem;
+
       pointer-events:none;
     }
 
     .label{
       display:inline-flex;
+
       align-items:center;
+
       gap:8px;
+
       padding:8px 10px;
+
       border-radius:999px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.05);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      background:
+        rgba(255,255,255,.05);
+
       font-size:.72rem;
+
       text-transform:uppercase;
+
       letter-spacing:.14em;
+
       color:#e8e0d1;
     }
 
     .card img{
       width:100%;
+
       aspect-ratio:1/1;
+
       object-fit:contain;
+
       margin-top:12px;
-      filter:drop-shadow(0 20px 40px rgba(0,0,0,.45));
+
+      filter:
+        drop-shadow(
+          0 20px 40px
+          rgba(0,0,0,.45)
+        );
+
       transition:.35s ease;
     }
-    .card:hover img{transform:translateY(-6px) scale(1.02)}
+
+    .card:hover img{
+      transform:
+        translateY(-6px)
+        scale(1.02);
+    }
+
     .card h3{
       margin:8px 0 8px;
+
       font-size:1.22rem;
     }
+
     .card p{
       margin:0;
+
       color:var(--muted);
+
       line-height:1.7;
+
       font-size:.95rem;
     }
 
-    .v1 img{}
-    .v2 img{filter:grayscale(1) contrast(1.14) drop-shadow(0 16px 32px rgba(0,0,0,.5))}
-    .v3 img{filter:sepia(.4) saturate(1.15) contrast(1.05) drop-shadow(0 16px 32px rgba(255,209,102,.08))}
-    .v4 img{filter:hue-rotate(-12deg) saturate(1.15) contrast(1.06) drop-shadow(0 0 24px rgba(60,239,255,.12))}
+    .v1 img{
+      filter:
+        drop-shadow(
+          0 20px 40px
+          rgba(0,0,0,.45)
+        );
+    }
+
+    .v2 img{
+      filter:
+        grayscale(1)
+        contrast(1.14)
+        drop-shadow(
+          0 16px 32px
+          rgba(0,0,0,.5)
+        );
+    }
+
+    .v3 img{
+      filter:
+        sepia(.4)
+        saturate(1.15)
+        contrast(1.05)
+        drop-shadow(
+          0 16px 32px
+          rgba(255,209,102,.08)
+        );
+    }
+
+    .v4 img{
+      filter:
+        hue-rotate(-12deg)
+        saturate(1.15)
+        contrast(1.06)
+        drop-shadow(
+          0 0 24px
+          rgba(60,239,255,.12)
+        );
+    }
+
+    /* WANTED GENERATOR */
 
     .meme-grid{
       display:grid;
-      grid-template-columns:.95fr 1.05fr;
+
+      grid-template-columns:
+        .95fr
+        1.05fr;
+
       gap:18px;
+
       align-items:start;
     }
 
     .input{
       width:100%;
+
       background:#06070a;
+
       color:var(--text);
-      border:1px solid rgba(255,255,255,.09);
+
+      border:
+        1px solid
+        rgba(255,255,255,.09);
+
       border-radius:16px;
+
       padding:14px 16px;
+
       outline:none;
+
       margin-bottom:12px;
     }
+
     .input:focus{
-      border-color:rgba(255,209,102,.4);
-      box-shadow:0 0 0 4px rgba(255,209,102,.07);
+      border-color:
+        rgba(255,209,102,.4);
+
+      box-shadow:
+        0 0 0 4px
+        rgba(255,209,102,.07);
     }
 
     .preview{
       border-radius:26px;
+
       padding:22px;
-      border:1px solid rgba(255,255,255,.08);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
       background:
-        radial-gradient(circle at 80% 10%, rgba(255,77,109,.09), transparent 18%),
-        radial-gradient(circle at 10% 90%, rgba(60,239,255,.09), transparent 18%),
-        linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)),
-        linear-gradient(180deg, #111319, #0a0b0e);
-      box-shadow:var(--shadow);
+        radial-gradient(
+          circle at 80% 10%,
+          rgba(255,77,109,.09),
+          transparent 18%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(60,239,255,.09),
+          transparent 18%
+        ),
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,.05),
+          rgba(255,255,255,.02)
+        ),
+        linear-gradient(
+          180deg,
+          #111319,
+          #0a0b0e
+        );
+
+      box-shadow:
+        var(--shadow);
+
       min-height:580px;
     }
 
     .poster-title{
       margin:0;
+
       font-size:4rem;
+
       line-height:.9;
     }
 
     .poster-meta{
       display:flex;
+
       flex-wrap:wrap;
+
       gap:10px;
+
       margin-top:10px;
+
       color:var(--muted);
+
       font-size:.78rem;
+
       text-transform:uppercase;
+
       letter-spacing:.15em;
     }
 
     .preview-character{
       display:flex;
+
       justify-content:center;
+
       padding:8px 0;
     }
 
     .preview-character img{
-      width:min(360px, 100%);
+      width:
+        min(
+          360px,
+          100%
+        );
+
       aspect-ratio:1/1;
+
       object-fit:contain;
-      filter:drop-shadow(0 24px 40px rgba(0,0,0,.55));
+
+      filter:
+        drop-shadow(
+          0 24px 40px
+          rgba(0,0,0,.55)
+        );
     }
 
     .wanted-name{
       margin:0;
+
       font-size:2.2rem;
+
       line-height:.95;
+
       text-transform:uppercase;
     }
 
     .crime{
       margin-top:12px;
+
       padding:16px;
+
       border-radius:18px;
-      border:1px dashed rgba(255,255,255,.1);
-      background:rgba(255,255,255,.04);
+
+      border:
+        1px dashed
+        rgba(255,255,255,.1);
+
+      background:
+        rgba(255,255,255,.04);
     }
 
     .crime span{
       display:block;
+
       color:var(--muted);
+
       font-size:.75rem;
+
       letter-spacing:.14em;
+
       text-transform:uppercase;
+
       margin-bottom:8px;
     }
 
     .crime strong{
       font-size:1.05rem;
+
       line-height:1.5;
     }
 
     .reward-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
+
+      grid-template-columns:
+        repeat(2,1fr);
+
       gap:12px;
+
       margin-top:12px;
     }
 
     .reward-box{
       padding:14px;
+
       border-radius:16px;
-      background:rgba(255,255,255,.04);
-      border:1px solid rgba(255,255,255,.08);
+
+      background:
+        rgba(255,255,255,.04);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
     }
 
     .reward-box span{
       display:block;
+
       color:var(--muted);
+
       font-size:.74rem;
+
       letter-spacing:.14em;
+
       margin-bottom:8px;
+
       text-transform:uppercase;
     }
 
     .reward-box strong{
       font-size:1.45rem;
+
       text-transform:uppercase;
     }
+
+    /* CTA */
 
     .cta{
       position:relative;
@@ -902,654 +1985,2037 @@
 
     .cta-box{
       border-radius:30px;
+
       padding:34px;
+
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.08);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
       background:
-        radial-gradient(circle at 10% 20%, rgba(255,255,255,.08), transparent 25%),
-        radial-gradient(circle at 85% 0%, rgba(255,209,102,.12), transparent 20%),
-        linear-gradient(135deg, #101216, #08090c);
-      box-shadow:var(--shadow);
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255,255,255,.08),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 85% 0%,
+          rgba(255,209,102,.12),
+          transparent 20%
+        ),
+        linear-gradient(
+          135deg,
+          #101216,
+          #08090c
+        );
+
+      box-shadow:
+        var(--shadow);
     }
 
     .cta-grid{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
+
+      grid-template-columns:
+        1.05fr
+        .95fr;
+
       gap:20px;
+
       align-items:center;
     }
 
     .cta h2{
       margin:0 0 10px;
-      font-size:clamp(2.3rem, 5vw, 4.6rem);
+
+      font-size:
+        clamp(
+          2.3rem,
+          5vw,
+          4.6rem
+        );
+
       line-height:.9;
     }
 
     .cta p{
       margin:0 0 22px;
+
       color:var(--muted);
+
       line-height:1.8;
+
       max-width:620px;
+    }
+
+    .social-status{
+      display:grid;
+
+      grid-template-columns:
+        repeat(2,1fr);
+
+      gap:12px;
+
+      margin-top:18px;
+    }
+
+    .social-box{
+      padding:16px;
+
+      border-radius:18px;
+
+      background:
+        rgba(255,255,255,.04);
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+    }
+
+    .social-box span{
+      display:block;
+
+      color:var(--muted);
+
+      font-size:.74rem;
+
+      text-transform:uppercase;
+
+      letter-spacing:.15em;
+
+      margin-bottom:8px;
+    }
+
+    .social-box strong{
+      font-size:1.25rem;
+
+      text-transform:uppercase;
     }
 
     .sticker-grid{
       display:grid;
-      grid-template-columns:repeat(2,1fr);
+
+      grid-template-columns:
+        repeat(2,1fr);
+
       gap:14px;
     }
 
     .sticker{
       padding:14px;
+
       border-radius:22px;
-      border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.04);
-      transform:rotate(var(--rot, 0deg));
+
+      border:
+        1px solid
+        rgba(255,255,255,.08);
+
+      background:
+        rgba(255,255,255,.04);
+
+      transform:
+        rotate(
+          var(--rot,0deg)
+        );
     }
 
     .sticker img{
       width:100%;
+
       aspect-ratio:1/1;
+
       object-fit:contain;
     }
 
     .sticker b{
       display:block;
+
       margin-top:8px;
+
       font-size:.78rem;
+
       letter-spacing:.14em;
+
       text-transform:uppercase;
+
       color:#ece2cc;
     }
 
+    /* FOOTER */
+
     footer{
       position:relative;
+
       z-index:3;
+
       padding:28px 0 44px;
+
       color:var(--muted);
     }
 
     .foot{
-      border-top:1px solid var(--line);
+      border-top:
+        1px solid
+        var(--line);
+
       padding-top:18px;
+
       display:flex;
-      justify-content:space-between;
+
+      justify-content:
+        space-between;
+
       gap:12px;
+
       flex-wrap:wrap;
+
       font-size:.95rem;
     }
 
+    /* CHAOS EFFECTS */
+
     .popup{
       position:fixed;
+
       left:50%;
       top:50%;
-      transform:translate(-50%, -50%);
-      background:rgba(255,209,102,.12);
+
+      transform:
+        translate(
+          -50%,
+          -50%
+        );
+
+      background:
+        rgba(255,209,102,.12);
+
       color:#fff3cb;
-      border:1px solid rgba(255,209,102,.24);
-      backdrop-filter:blur(10px);
+
+      border:
+        1px solid
+        rgba(255,209,102,.24);
+
+      backdrop-filter:
+        blur(10px);
+
       padding:12px 16px;
+
       border-radius:999px;
+
       text-transform:uppercase;
+
       font-weight:900;
+
       letter-spacing:.12em;
-      box-shadow:var(--shadow);
+
+      box-shadow:
+        var(--shadow);
+
       z-index:1200;
+
       pointer-events:none;
-      animation:popup 1.4s ease forwards;
+
+      animation:
+        popup
+        1.4s
+        ease
+        forwards;
     }
+
     @keyframes popup{
-      0%{opacity:0; transform:translate(-50%,-50%) scale(.8)}
-      20%{opacity:1; transform:translate(-50%,-58%) scale(1)}
-      100%{opacity:0; transform:translate(-50%,-140%) scale(1.05)}
+      0%{
+        opacity:0;
+
+        transform:
+          translate(
+            -50%,
+            -50%
+          )
+          scale(.8);
+      }
+
+      20%{
+        opacity:1;
+
+        transform:
+          translate(
+            -50%,
+            -58%
+          )
+          scale(1);
+      }
+
+      100%{
+        opacity:0;
+
+        transform:
+          translate(
+            -50%,
+            -140%
+          )
+          scale(1.05);
+      }
     }
 
     .shake{
-      animation:shake .45s ease;
-    }
-    @keyframes shake{
-      0%{transform:translateX(0)}
-      15%{transform:translateX(-6px)}
-      30%{transform:translateX(6px)}
-      45%{transform:translateX(-8px)}
-      60%{transform:translateX(8px)}
-      75%{transform:translateX(-4px)}
-      100%{transform:translateX(0)}
+      animation:
+        shake
+        .45s
+        ease;
     }
 
-    @media (max-width:1080px){
+    @keyframes shake{
+      0%{
+        transform:
+          translateX(0);
+      }
+
+      15%{
+        transform:
+          translateX(-6px);
+      }
+
+      30%{
+        transform:
+          translateX(6px);
+      }
+
+      45%{
+        transform:
+          translateX(-8px);
+      }
+
+      60%{
+        transform:
+          translateX(8px);
+      }
+
+      75%{
+        transform:
+          translateX(-4px);
+      }
+
+      100%{
+        transform:
+          translateX(0);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1080px){
       .hero-grid,
       .command-grid,
       .meme-grid,
       .cta-grid{
         grid-template-columns:1fr;
       }
+
       .stats{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
+
       .gallery{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
-      .hero-art{min-height:auto;padding-top:14px}
-      .floating-card{display:none}
+
+      .token-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-art{
+        min-height:auto;
+
+        padding-top:14px;
+      }
+
+      .floating-card{
+        display:none;
+      }
     }
 
-    @media (max-width:720px){
-      .nav{flex-direction:column;align-items:flex-start}
-      .nav-links{justify-content:flex-start}
+    @media(max-width:720px){
+      .nav{
+        flex-direction:column;
+
+        align-items:flex-start;
+      }
+
+      .nav-links{
+        justify-content:flex-start;
+      }
+
       .stats,
       .gallery,
       .reward-grid,
-      .sticker-grid{
+      .sticker-grid,
+      .social-status{
         grid-template-columns:1fr;
       }
+
       .info-grid{
         grid-template-columns:1fr;
       }
+
       .poster-title{
         font-size:3rem;
       }
+
       .card{
         min-height:auto;
       }
     }
   </style>
 </head>
+
 <body>
+
   <div class="grid-bg"></div>
   <div class="noise"></div>
   <div class="scanlines"></div>
   <div class="flash" id="flash"></div>
 
+  <!-- NAV -->
+
   <header class="topbar">
+
     <div class="container nav">
+
       <div class="brand">
-        <img class="brand-logo" src="https://files.catbox.moe/s7cydo.png" alt="LAWLESS logo" />
+
+        <img
+          class="brand-logo"
+          src="https://files.catbox.moe/s7cydo.png"
+          alt="LAWLESS"
+        />
+
         <div class="brand-title">
           <strong>LAWLESS</strong>
           <span>No Rules // Just Lore</span>
         </div>
+
       </div>
 
       <nav class="nav-links">
-        <a href="#stats">Metrics</a>
-        <a href="#command">Command</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#wanted">Wanted</a>
-        <a href="#join">Join</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#token">Token</a>
+        <a href="#command">Terminal</a>
+        <a href="#gallery">Outlaws</a>
+        <a href="#wanted">Propaganda</a>
+        <a href="#join">Community</a>
       </nav>
+
     </div>
+
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">⚠ Meme Token / Community Project</div>
 
-          <h1 class="glitch" data-text="LAWLESS">
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            ⚠ MOST WANTED ON THE INTERNET
+          </div>
+
+          <h1
+            class="glitch"
+            data-text="LAWLESS"
+          >
             LAWLESS
           </h1>
 
           <p class="lead">
-            LAWLESS is built like an internet outlaw brand: loud, dark, premium, chaotic, and impossible to ignore.
-            This version is deliberately more brutal — more glitch, more attitude, more meme-token energy, and way more screenshot bait.
+            A meme-powered outlaw community built for people
+            who were never interested in following the script.
+            No corporate promises. No fake seriousness.
+            Just memes, lore, community, and beautiful internet chaos.
           </p>
 
           <div class="hero-pills">
-            <span class="pill">Most Wanted Community</span>
-            <span class="pill">Brutal Meme Energy</span>
-            <span class="pill">Luxury Chaos Aesthetic</span>
-            <span class="pill">Token Lore Ready</span>
+
+            <span class="pill">
+              1B Total Supply
+            </span>
+
+            <span class="pill">
+              Community Driven
+            </span>
+
+            <span class="pill">
+              Meme Powered
+            </span>
+
+            <span class="pill">
+              Permanently Lawless
+            </span>
+
           </div>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#join">Join The Gang</a>
-            <button class="btn chaos" id="breakBtn">Break The Law</button>
-            <button class="btn secondary" id="copyCABtn">Copy Contract</button>
+
+            <a
+              class="btn primary"
+              href="#join"
+            >
+              Join The Gang
+            </a>
+
+            <button
+              class="btn chaos"
+              id="breakBtn"
+            >
+              Break The Law
+            </button>
+
+            <button
+              class="btn secondary"
+              id="caStatusBtn"
+            >
+              CA: TBA
+            </button>
+
           </div>
 
-          <div class="hero-note" id="heroNote">System status: outlaw energy stable.</div>
+          <div
+            class="hero-note"
+            id="heroNote"
+          >
+            System status: outlaw energy stable.
+          </div>
+
         </div>
 
+        <!-- HERO CHARACTER -->
+
         <div class="hero-art">
+
           <div class="floating-card fc1">
-            <img class="lawless-art" alt="Lawless grayscale">
+            <img
+              class="lawless-art"
+              alt="Lawless Noir"
+            />
             <small>Noir Wanted</small>
           </div>
+
           <div class="floating-card fc2">
-            <img class="lawless-art" alt="Lawless sepia">
+            <img
+              class="lawless-art"
+              alt="Lawless Outlaw"
+            />
             <small>Outlaw Drop</small>
           </div>
+
           <div class="floating-card fc3">
-            <img class="lawless-art" alt="Lawless glitch">
+            <img
+              class="lawless-art"
+              alt="Lawless Glitch"
+            />
             <small>Glitch Asset</small>
           </div>
+
           <div class="floating-card fc4">
-            <img class="lawless-art" alt="Lawless alt sticker">
+            <img
+              class="lawless-art"
+              alt="Lawless Sticker"
+            />
             <small>Sticker Pack</small>
           </div>
 
           <div class="main-card">
+
             <div class="card-head">
+
               <div>
                 <h3>Most Wanted Asset</h3>
-                <p>Internet outlaw. Community icon. Meme ammo.</p>
+                <p>
+                  Internet outlaw.
+                  Community icon.
+                  Meme ammunition.
+                </p>
               </div>
-              <div class="stamp">At Large</div>
+
+              <div class="stamp">
+                At Large
+              </div>
+
             </div>
 
-            <img class="hero-character lawless-art" alt="Lawless main character">
+            <img
+              class="hero-character lawless-art"
+              alt="Lawless Character"
+            />
 
             <div class="info-grid">
+
               <div class="info-box">
-                <span>Crime</span>
-                <strong>Excessive Aura</strong>
+                <span>Supply</span>
+                <strong>1 Billion</strong>
               </div>
+
               <div class="info-box">
-                <span>Reward</span>
-                <strong>$69,420</strong>
+                <span>Contract</span>
+                <strong>TBA</strong>
               </div>
+
               <div class="info-box">
                 <span>Threat Level</span>
                 <strong>Maximum Based</strong>
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
+      <!-- TICKER -->
 
       <div class="ticker-wrap">
+
         <div class="ticker">
-          <span>LAWLESS • BREAK THE LAW • COMMUNITY > NORMALITY • MEMES ARE FOREVER • MOST WANTED TOKEN • NO RULES • JUST LORE •</span>
-          <span>LAWLESS • BREAK THE LAW • COMMUNITY > NORMALITY • MEMES ARE FOREVER • MOST WANTED TOKEN • NO RULES • JUST LORE •</span>
+
+          <span>
+            LAWLESS •
+            1,000,000,000 SUPPLY •
+            BREAK THE LAW •
+            COMMUNITY > NORMALITY •
+            MEMES ARE FOREVER •
+            CA TBA •
+            X TBA •
+            NO RULES •
+            JUST LORE •
+          </span>
+
+          <span>
+            LAWLESS •
+            1,000,000,000 SUPPLY •
+            BREAK THE LAW •
+            COMMUNITY > NORMALITY •
+            MEMES ARE FOREVER •
+            CA TBA •
+            X TBA •
+            NO RULES •
+            JUST LORE •
+          </span>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="stats">
+    <!-- METRICS -->
+
+    <section id="metrics">
+
       <div class="container">
+
         <div class="section-head">
+
           <div>
-            <div class="tag">Illegal Metrics</div>
-            <h2 class="title">The Outlaw Dashboard</h2>
+            <div class="tag">
+              Illegal Metrics
+            </div>
+
+            <h2 class="title">
+              The Outlaw Dashboard
+            </h2>
           </div>
+
           <p class="desc">
-            Bukan dashboard corporate. Ini dashboard yang berasa campuran antara terminal kriminal,
-            poster wanted, dan landing page meme token yang terlalu percaya diri.
+            Numbers engineered for maximum meme energy.
+            The only metric that really matters is whether
+            the timeline remembers your name.
           </p>
+
         </div>
 
         <div class="stats">
+
           <div class="stat">
+
+            <h3>Total Supply</h3>
+
+            <strong>
+              1B
+            </strong>
+
+            <p>
+              1,000,000,000 LAWLESS.
+              One billion chances to become part of the lore.
+            </p>
+
+          </div>
+
+          <div class="stat">
+
             <h3>Laws Broken</h3>
-            <strong id="lawsBroken">420,069</strong>
-            <p>Naik setiap kali tombol chaos disentuh oleh pihak tidak bertanggung jawab.</p>
+
+            <strong id="lawsBroken">
+              420,069
+            </strong>
+
+            <p>
+              This number increases every time someone
+              presses the wrong button.
+            </p>
+
           </div>
+
           <div class="stat">
-            <h3>Community Heat</h3>
-            <strong>999%</strong>
-            <p>Sentimen komunitas berada di level “unnecessarily dangerous”.</p>
+
+            <h3>Contract</h3>
+
+            <strong>
+              TBA
+            </strong>
+
+            <p>
+              The official contract address will be published
+              when LAWLESS goes live.
+            </p>
+
           </div>
+
           <div class="stat">
-            <h3>Current Status</h3>
-            <strong>AT LARGE</strong>
-            <p>Belum tertangkap, tidak menunjukkan niat untuk kooperatif.</p>
+
+            <h3>X / Twitter</h3>
+
+            <strong>
+              TBA
+            </strong>
+
+            <p>
+              The official LAWLESS account will be announced soon.
+            </p>
+
           </div>
-          <div class="stat">
-            <h3>Meme Output</h3>
-            <strong>24/7</strong>
-            <p>Produksi lore, propaganda, dan chaos berjalan tanpa jam operasional.</p>
-          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section id="command">
-      <div class="container command-grid">
-        <div class="panel">
-          <div class="tag">Command Center</div>
-          <h2 class="title" style="margin:0 0 10px;">Terminal of Disorder</h2>
-          <p class="desc" style="margin:0 0 18px;">
-            Tempat untuk ngejual vibe project: brutal, terminal-like, dan penuh sinyal sosial.
+    <!-- TOKEN -->
+
+    <section id="token">
+
+      <div class="container">
+
+        <div class="section-head">
+
+          <div>
+
+            <div class="tag">
+              Token Information
+            </div>
+
+            <h2 class="title">
+              Built For The Timeline
+            </h2>
+
+          </div>
+
+          <p class="desc">
+            Simple by design. LAWLESS is built around
+            recognizable branding, community culture,
+            memes, and an endless supply of internet lore.
           </p>
 
-          <div class="terminal" id="terminal">
-            <div class="terminal-line"><span class="muted">root@lawless:~$</span> initializing outlaw protocol...</div>
-            <div class="terminal-line"><span class="ok">[ok]</span> identity loaded: LAWLESS</div>
-            <div class="terminal-line"><span class="ok">[ok]</span> meme reactor online</div>
-            <div class="terminal-line"><span class="warn">[warn]</span> excessive aura detected</div>
-            <div class="terminal-line"><span class="err">[alert]</span> internet law #420 already violated</div>
-            <div class="terminal-line"><span class="muted">root@lawless:~$</span> status: <span class="ok">still at large</span></div>
+        </div>
+
+        <div class="token-grid">
+
+          <article class="token-card">
+
+            <span>
+              Total Supply
+            </span>
+
+            <strong>
+              1,000,000,000
+            </strong>
+
+            <p>
+              One billion LAWLESS tokens.
+              Clean, simple, and easy to remember.
+            </p>
+
+          </article>
+
+          <article class="token-card">
+
+            <span>
+              Contract Address
+            </span>
+
+            <strong>
+              TBA
+            </strong>
+
+            <p>
+              Always verify the official contract address
+              through official LAWLESS channels after launch.
+            </p>
+
+          </article>
+
+          <article class="token-card">
+
+            <span>
+              X / Twitter
+            </span>
+
+            <strong>
+              TBA
+            </strong>
+
+            <p>
+              The official social account will be announced
+              when the gang is ready to take over the timeline.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- COMMAND CENTER -->
+
+    <section id="command">
+
+      <div class="container command-grid">
+
+        <div class="panel">
+
+          <div class="tag">
+            Command Center
+          </div>
+
+          <h2
+            class="title"
+            style="margin:0 0 10px;"
+          >
+            Terminal of Disorder
+          </h2>
+
+          <p
+            class="desc"
+            style="margin:0 0 18px;"
+          >
+            LAWLESS systems are operational.
+            Common sense remains offline.
+          </p>
+
+          <div
+            class="terminal"
+            id="terminal"
+          >
+
+            <div class="terminal-line">
+              <span class="muted">
+                root@lawless:~$
+              </span>
+              initializing outlaw protocol...
+            </div>
+
+            <div class="terminal-line">
+              <span class="ok">
+                [ok]
+              </span>
+              identity loaded: LAWLESS
+            </div>
+
+            <div class="terminal-line">
+              <span class="ok">
+                [ok]
+              </span>
+              token supply detected: 1,000,000,000
+            </div>
+
+            <div class="terminal-line">
+              <span class="warn">
+                [warn]
+              </span>
+              contract address status: TBA
+            </div>
+
+            <div class="terminal-line">
+              <span class="warn">
+                [warn]
+              </span>
+              X account status: TBA
+            </div>
+
+            <div class="terminal-line">
+              <span class="err">
+                [alert]
+              </span>
+              excessive aura detected
+            </div>
+
+            <div class="terminal-line">
+              <span class="err">
+                [alert]
+              </span>
+              internet law #420 already violated
+            </div>
+
+            <div class="terminal-line">
+              <span class="muted">
+                root@lawless:~$
+              </span>
+              status:
+              <span class="ok">
+                still at large
+              </span>
+            </div>
+
           </div>
 
           <div class="command-actions">
-            <button class="btn chaos" id="chaosBtn">Trigger Chaos</button>
-            <button class="btn secondary" id="randomMsgBtn">Random Log</button>
-            <a class="btn primary" href="#wanted">Make Propaganda</a>
+
+            <button
+              class="btn chaos"
+              id="chaosBtn"
+            >
+              Trigger Chaos
+            </button>
+
+            <button
+              class="btn secondary"
+              id="randomMsgBtn"
+            >
+              Random Log
+            </button>
+
+            <a
+              class="btn primary"
+              href="#wanted"
+            >
+              Make Propaganda
+            </a>
+
           </div>
 
           <div class="ca-box">
-            <code id="caText">0xLAWLESS42069REPLACEWITHYOURTOKENADDRESS</code>
-            <button class="btn secondary" id="copyBtn">Copy</button>
+
+            <span class="ca-label">
+              Official Contract Address
+            </span>
+
+            <code>
+              TBA
+            </code>
+
           </div>
+
         </div>
+
+        <!-- LAWLESS CODE -->
 
         <div class="panel">
-          <div class="tag">The Only Rules</div>
-          <h2 class="title" style="margin:0 0 10px;">Lawless Code</h2>
-          <div class="laws">
-            <div class="law">
-              <b>01</b>
-              <div>
-                <h4>Never Be Boring</h4>
-                <p>Kalau bisa bikin orang screenshot, jangan puas cuma terlihat “rapi”.</p>
-              </div>
-            </div>
-            <div class="law">
-              <b>02</b>
-              <div>
-                <h4>Memes Over Meetings</h4>
-                <p>Lore, jokes, dan propaganda komunitas sering lebih kuat dari deck presentasi 17 slide.</p>
-              </div>
-            </div>
-            <div class="law">
-              <b>03</b>
-              <div>
-                <h4>Community Writes History</h4>
-                <p>Biarkan holder dan member yang ikut bentuk kultur, istilah, dan mitologi project.</p>
-              </div>
-            </div>
-            <div class="law">
-              <b>04</b>
-              <div>
-                <h4>There Is No Law #04</h4>
-                <p>Kalau ditanya, bilang filenya rusak gara-gara chaos atau terlalu based untuk dibuka publik.</p>
-              </div>
-            </div>
+
+          <div class="tag">
+            The Only Rules
           </div>
+
+          <h2
+            class="title"
+            style="margin:0 0 10px;"
+          >
+            Lawless Code
+          </h2>
+
+          <div class="laws">
+
+            <div class="law">
+
+              <b>
+                01
+              </b>
+
+              <div>
+
+                <h4>
+                  Never Be Boring
+                </h4>
+
+                <p>
+                  If people can ignore it,
+                  it is not LAWLESS enough.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="law">
+
+              <b>
+                02
+              </b>
+
+              <div>
+
+                <h4>
+                  Memes Over Meetings
+                </h4>
+
+                <p>
+                  A great meme can travel farther
+                  than a hundred-page strategy deck.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="law">
+
+              <b>
+                03
+              </b>
+
+              <div>
+
+                <h4>
+                  Community Writes History
+                </h4>
+
+                <p>
+                  The holders create the jokes,
+                  legends, culture, and mythology.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="law">
+
+              <b>
+                04
+              </b>
+
+              <div>
+
+                <h4>
+                  There Is No Law #04
+                </h4>
+
+                <p>
+                  The file was reportedly destroyed
+                  for being dangerously based.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="law">
+
+              <b>
+                05
+              </b>
+
+              <div>
+
+                <h4>
+                  Protect The Lore
+                </h4>
+
+                <p>
+                  Every meme, screenshot, phrase,
+                  and inside joke becomes part of LAWLESS history.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
+    <!-- CHARACTER GALLERY -->
+
     <section id="gallery">
+
       <div class="container">
+
         <div class="section-head">
+
           <div>
-            <div class="tag">Character Assets</div>
-            <h2 class="title">Many Faces of Lawless</h2>
+
+            <div class="tag">
+              Outlaw Archive
+            </div>
+
+            <h2 class="title">
+              Many Faces of Lawless
+            </h2>
+
           </div>
+
           <p class="desc">
-            Karakter yang sama dipakai berkali-kali dengan treatment yang beda supaya websitenya kaya aset,
-            lebih hidup, dan terasa seperti brand universe — padahal tetap simpel.
+            One character.
+            Multiple identities.
+            Endless meme ammunition.
+            Every version exists to keep the LAWLESS universe
+            recognizable without ever feeling repetitive.
           </p>
+
         </div>
 
         <div class="gallery">
+
           <article class="card v1">
-            <div class="label">Core Asset</div>
-            <img class="lawless-art" alt="Lawless original">
-            <h3>Classic Lawless</h3>
-            <p>Versi utama untuk hero, splash section, dan identitas inti project.</p>
+
+            <div class="label">
+              Core Asset
+            </div>
+
+            <img
+              class="lawless-art"
+              alt="Classic Lawless"
+            />
+
+            <h3>
+              Classic Lawless
+            </h3>
+
+            <p>
+              The original outlaw.
+              Built for hero banners, profile assets,
+              posters, and iconic meme templates.
+            </p>
+
           </article>
 
           <article class="card v2">
-            <div class="label">Noir Mode</div>
-            <img class="lawless-art" alt="Lawless grayscale">
-            <h3>Midnight Variant</h3>
-            <p>Lebih dingin, lebih misterius, dan cocok buat teaser atau “serious meme” mode.</p>
+
+            <div class="label">
+              Noir Mode
+            </div>
+
+            <img
+              class="lawless-art"
+              alt="Midnight Lawless"
+            />
+
+            <h3>
+              Midnight Lawless
+            </h3>
+
+            <p>
+              Darker, colder, and significantly
+              more suspicious.
+            </p>
+
           </article>
 
           <article class="card v3">
-            <div class="label">Outlaw Poster</div>
-            <img class="lawless-art" alt="Lawless sepia">
-            <h3>Wanted Edition</h3>
-            <p>Berasa seperti poster buronan premium — enak untuk lore drop dan collectible vibe.</p>
+
+            <div class="label">
+              Wanted Poster
+            </div>
+
+            <img
+              class="lawless-art"
+              alt="Wanted Lawless"
+            />
+
+            <h3>
+              Wanted Edition
+            </h3>
+
+            <p>
+              Old-west outlaw energy redesigned
+              for modern internet crime.
+            </p>
+
           </article>
 
           <article class="card v4">
-            <div class="label">Glitch Heat</div>
-            <img class="lawless-art" alt="Lawless neon">
-            <h3>Glitched Aura</h3>
-            <p>Versi lebih modern dan toxic, pas buat push momentum komunitas dan event hype.</p>
+
+            <div class="label">
+              Glitch Heat
+            </div>
+
+            <img
+              class="lawless-art"
+              alt="Glitched Lawless"
+            />
+
+            <h3>
+              Glitched Aura
+            </h3>
+
+            <p>
+              Maximum timeline energy.
+              Recommended during periods of
+              excessive community chaos.
+            </p>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
+    <!-- WANTED GENERATOR -->
+
     <section id="wanted">
+
       <div class="container meme-grid">
+
         <div class="panel">
-          <div class="tag">Propaganda Tool</div>
-          <h2 class="title" style="margin:0 0 10px;">Wanted Generator</h2>
-          <p class="desc" style="margin:0 0 18px;">
-            Bikin section yang lucu dan gampang dipotong jadi konten. Cocok buat screenshot, campaign, dan community meme.
+
+          <div class="tag">
+            Community Propaganda
+          </div>
+
+          <h2
+            class="title"
+            style="margin:0 0 10px;"
+          >
+            Wanted Generator
+          </h2>
+
+          <p
+            class="desc"
+            style="margin:0 0 18px;"
+          >
+            Put yourself on the LAWLESS wanted list.
+            Generate a crime.
+            Screenshot it.
+            Become part of the evidence.
           </p>
 
-          <input class="input" id="nameInput" type="text" placeholder="Masukkan nama / username..." maxlength="26">
-          <button class="btn primary" id="applyNameBtn" style="margin-bottom:12px;">Apply Name</button>
-          <button class="btn secondary" id="randomCrimeBtn">Random Crime</button>
+          <input
+            class="input"
+            id="nameInput"
+            type="text"
+            placeholder="Enter your name or username..."
+            maxlength="26"
+          />
 
-          <div class="ca-box" style="margin-top:18px;">
-            <code>X: @lawless • Telegram: t.me/lawless • CA: 0xLAWLESS42069REPLACEWITHYOURTOKENADDRESS</code>
+          <div class="command-actions">
+
+            <button
+              class="btn primary"
+              id="applyNameBtn"
+            >
+              Apply Name
+            </button>
+
+            <button
+              class="btn secondary"
+              id="randomCrimeBtn"
+            >
+              Random Crime
+            </button>
+
           </div>
+
+          <div class="ca-box">
+
+            <span class="ca-label">
+              Official Information
+            </span>
+
+            <code>
+              CA: TBA // X: TBA // SUPPLY: 1,000,000,000
+            </code>
+
+          </div>
+
         </div>
 
+        <!-- POSTER -->
+
         <div class="preview">
-          <h3 class="poster-title">Wanted</h3>
+
+          <h3 class="poster-title">
+            Wanted
+          </h3>
+
           <div class="poster-meta">
-            <span>Most Wanted Entity</span>
-            <span>Case File: #LAW-420</span>
-            <span>Status: Active</span>
+
+            <span>
+              Most Wanted Entity
+            </span>
+
+            <span>
+              Case File: #LAW-420
+            </span>
+
+            <span>
+              Status: Active
+            </span>
+
           </div>
 
           <div class="preview-character">
-            <img class="lawless-art" alt="Lawless wanted poster">
+
+            <img
+              class="lawless-art"
+              alt="LAWLESS Wanted Poster"
+            />
+
           </div>
 
-          <h4 class="wanted-name" id="wantedName">Your Name Here</h4>
+          <h4
+            class="wanted-name"
+            id="wantedName"
+          >
+            Your Name Here
+          </h4>
 
           <div class="crime">
-            <span>Primary Crime</span>
-            <strong id="crimeText">Being too early and suspiciously bullish.</strong>
+
+            <span>
+              Primary Crime
+            </span>
+
+            <strong id="crimeText">
+              Being too early and suspiciously bullish.
+            </strong>
+
           </div>
 
           <div class="reward-grid">
+
             <div class="reward-box">
-              <span>Reward</span>
-              <strong>$69,420</strong>
+
+              <span>
+                Reward
+              </span>
+
+              <strong>
+                69,420 LAWLESS
+              </strong>
+
             </div>
+
             <div class="reward-box">
-              <span>Threat Level</span>
-              <strong>Maximum Based</strong>
+
+              <span>
+                Threat Level
+              </span>
+
+              <strong>
+                Maximum Based
+              </strong>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="cta" id="join">
+    <!-- COMMUNITY CTA -->
+
+    <section
+      class="cta"
+      id="join"
+    >
+
       <div class="container">
+
         <div class="cta-box">
+
           <div class="cta-grid">
+
             <div>
-              <div class="tag">Join The Gang</div>
-              <h2>Make the internet more lawless.</h2>
+
+              <div class="tag">
+                Join The Gang
+              </div>
+
+              <h2>
+                The timeline needs more outlaws.
+              </h2>
+
               <p>
-                Versi ini dibuat sengaja lebih “keras” secara visual: lebih glitch, lebih mahal vibe-nya,
-                lebih cocok untuk meme token, degen community, dan project yang mau langsung terasa beda.
-                Tinggal ganti CA, social links, dan copy sesuai arah project kamu.
+                LAWLESS is not trying to look corporate.
+                It is built to feel like a living internet character:
+                memeable, recognizable, chaotic, and owned by the community.
+                The contract and official social channels will be announced
+                when they are ready.
               </p>
 
-              <div class="hero-actions" style="margin-top:0;">
-                <a class="btn primary" href="#">Buy / Launch</a>
-                <a class="btn secondary" href="#">Join Telegram</a>
-                <a class="btn secondary" href="#">Follow X</a>
+              <div class="social-status">
+
+                <div class="social-box">
+
+                  <span>
+                    Contract Address
+                  </span>
+
+                  <strong>
+                    TBA
+                  </strong>
+
+                </div>
+
+                <div class="social-box">
+
+                  <span>
+                    X / Twitter
+                  </span>
+
+                  <strong>
+                    TBA
+                  </strong>
+
+                </div>
+
+                <div class="social-box">
+
+                  <span>
+                    Total Supply
+                  </span>
+
+                  <strong>
+                    1B LAWLESS
+                  </strong>
+
+                </div>
+
+                <div class="social-box">
+
+                  <span>
+                    Community Status
+                  </span>
+
+                  <strong>
+                    Recruiting
+                  </strong>
+
+                </div>
+
               </div>
+
+              <div class="hero-actions">
+
+                <button
+                  class="btn primary disabled"
+                  id="launchBtn"
+                >
+                  Launch: TBA
+                </button>
+
+                <button
+                  class="btn secondary disabled"
+                  id="xBtn"
+                >
+                  X: TBA
+                </button>
+
+              </div>
+
             </div>
+
+            <!-- STICKERS -->
 
             <div class="sticker-grid">
-              <div class="sticker" style="--rot:-5deg;">
-                <img class="lawless-art" alt="Sticker pack 1">
-                <b>Sticker Pack</b>
+
+              <div
+                class="sticker"
+                style="--rot:-5deg;"
+              >
+
+                <img
+                  class="lawless-art"
+                  alt="LAWLESS Sticker"
+                />
+
+                <b>
+                  Sticker Pack
+                </b>
+
               </div>
-              <div class="sticker" style="--rot:4deg;">
-                <img class="lawless-art" alt="Sticker pack 2">
-                <b>Community Drop</b>
+
+              <div
+                class="sticker"
+                style="--rot:4deg;"
+              >
+
+                <img
+                  class="lawless-art"
+                  alt="LAWLESS Community"
+                />
+
+                <b>
+                  Community Drop
+                </b>
+
               </div>
-              <div class="sticker" style="--rot:5deg;">
-                <img class="lawless-art" alt="Sticker pack 3">
-                <b>Meme Asset</b>
+
+              <div
+                class="sticker"
+                style="--rot:5deg;"
+              >
+
+                <img
+                  class="lawless-art"
+                  alt="LAWLESS Meme"
+                />
+
+                <b>
+                  Meme Asset
+                </b>
+
               </div>
-              <div class="sticker" style="--rot:-4deg;">
-                <img class="lawless-art" alt="Sticker pack 4">
-                <b>Poster Card</b>
+
+              <div
+                class="sticker"
+                style="--rot:-4deg;"
+              >
+
+                <img
+                  class="lawless-art"
+                  alt="LAWLESS Poster"
+                />
+
+                <b>
+                  Wanted Poster
+                </b>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
+  <!-- FOOTER -->
+
   <footer>
+
     <div class="container foot">
-      <span>© 2025 LAWLESS — Rules are temporary. Memes are forever.</span>
-      <span>Single HTML V2 // Brutal Glitch Luxury Edition</span>
+
+      <span>
+        © LAWLESS — Rules are temporary. Memes are forever.
+      </span>
+
+      <span>
+        Supply: 1B // CA: TBA // X: TBA
+      </span>
+
     </div>
+
   </footer>
 
   <script>
-    const LAWLESS_IMG = "https://files.catbox.moe/s7cydo.png";
-    const CONTRACT_ADDRESS = "0xLAWLESS42069REPLACEWITHYOURTOKENADDRESS";
 
-    const arts = document.querySelectorAll(".lawless-art");
-    arts.forEach(img => img.src = LAWLESS_IMG);
+    /*
+      LAWLESS CONFIGURATION
+    */
 
-    const crimeText = document.getElementById("crimeText");
-    const wantedName = document.getElementById("wantedName");
-    const nameInput = document.getElementById("nameInput");
-    const applyNameBtn = document.getElementById("applyNameBtn");
-    const randomCrimeBtn = document.getElementById("randomCrimeBtn");
-    const lawsBrokenEl = document.getElementById("lawsBroken");
-    const heroNote = document.getElementById("heroNote");
-    const flash = document.getElementById("flash");
-    const breakBtn = document.getElementById("breakBtn");
-    const chaosBtn = document.getElementById("chaosBtn");
-    const copyBtn = document.getElementById("copyBtn");
-    const copyCABtn = document.getElementById("copyCABtn");
-    const randomMsgBtn = document.getElementById("randomMsgBtn");
-    const terminal = document.getElementById("terminal");
-    const caText = document.getElementById("caText");
+    const LAWLESS_IMG =
+      "https://files.catbox.moe/s7cydo.png";
 
-    caText.textContent = CONTRACT_ADDRESS;
+    const TOTAL_SUPPLY =
+      "1,000,000,000";
 
-    let lawsBroken = 420069;
+    const CONTRACT_ADDRESS =
+      "TBA";
+
+    const X_ACCOUNT =
+      "TBA";
+
+    /*
+      Load LAWLESS artwork everywhere.
+    */
+
+    document
+      .querySelectorAll(".lawless-art")
+      .forEach(
+        image => {
+          image.src = LAWLESS_IMG;
+        }
+      );
+
+    /*
+      ELEMENTS
+    */
+
+    const crimeText =
+      document.getElementById(
+        "crimeText"
+      );
+
+    const wantedName =
+      document.getElementById(
+        "wantedName"
+      );
+
+    const nameInput =
+      document.getElementById(
+        "nameInput"
+      );
+
+    const applyNameBtn =
+      document.getElementById(
+        "applyNameBtn"
+      );
+
+    const randomCrimeBtn =
+      document.getElementById(
+        "randomCrimeBtn"
+      );
+
+    const lawsBrokenEl =
+      document.getElementById(
+        "lawsBroken"
+      );
+
+    const heroNote =
+      document.getElementById(
+        "heroNote"
+      );
+
+    const flash =
+      document.getElementById(
+        "flash"
+      );
+
+    const breakBtn =
+      document.getElementById(
+        "breakBtn"
+      );
+
+    const chaosBtn =
+      document.getElementById(
+        "chaosBtn"
+      );
+
+    const randomMsgBtn =
+      document.getElementById(
+        "randomMsgBtn"
+      );
+
+    const terminal =
+      document.getElementById(
+        "terminal"
+      );
+
+    const caStatusBtn =
+      document.getElementById(
+        "caStatusBtn"
+      );
+
+    const launchBtn =
+      document.getElementById(
+        "launchBtn"
+      );
+
+    const xBtn =
+      document.getElementById(
+        "xBtn"
+      );
+
+    /*
+      STATE
+    */
+
+    let lawsBroken =
+      420069;
+
+    /*
+      RANDOM CRIMES
+    */
 
     const crimes = [
+
       "Being too early and suspiciously bullish.",
-      "Buying the dip with criminal confidence.",
-      "Posting propaganda without permission.",
-      "Violating Internet Law #420 repeatedly.",
+
+      "Possession of excessive aura.",
+
+      "Posting memes with criminal intent.",
+
+      "Refusing to follow the timeline.",
+
+      "Breaking Internet Law #420.",
+
       "Causing unnecessary FOMO.",
-      "Running on pure meme energy.",
-      "Holding with suspicious intent.",
+
+      "Holding with suspicious confidence.",
+
+      "Operating without adult supervision.",
+
       "Being illegally iconic.",
-      "Refusing to act normal.",
-      "Possession of excessive aura."
+
+      "Manufacturing dangerous amounts of lore.",
+
+      "Using memes as financial infrastructure.",
+
+      "Refusing to behave normally.",
+
+      "Entering the community with reckless optimism.",
+
+      "Possession of unregistered diamond hands.",
+
+      "Attempting to make the timeline interesting."
+
     ];
+
+    /*
+      HERO CHAOS MESSAGES
+    */
 
     const heroNotes = [
+
       "System status: outlaw energy stable.",
+
       "Alert: another law has been broken successfully.",
+
       "Community heat increased by 12%.",
-      "Warning: vibe level has become dangerous.",
+
+      "Warning: meme levels have exceeded legal limits.",
+
       "New crime unlocked: unlicensed excellence.",
+
       "Case update: still at large, still based.",
-      "Internet police attempted contact. They joined instead."
+
+      "Internet police attempted contact. They joined instead.",
+
+      "Timeline contamination detected.",
+
+      "Lore production increased unexpectedly.",
+
+      "Common sense module remains offline."
+
     ];
+
+    /*
+      TERMINAL LOGS
+    */
 
     const terminalLogs = [
-      '[warn] memetic pressure increasing beyond legal threshold',
-      '[ok] community reactor reached maximum based',
-      '[alert] outlaw protocol spreading across timeline',
-      '[warn] excessive screenshots detected',
-      '[ok] lore generation engine stable',
-      '[alert] holder morale irrationally high',
-      '[warn] chart watchers showing suspicious optimism',
-      '[ok] no rules subsystem verified'
+
+      "[warn] memetic pressure increasing beyond legal threshold",
+
+      "[ok] community reactor reached maximum based",
+
+      "[alert] outlaw protocol spreading across the timeline",
+
+      "[warn] excessive screenshots detected",
+
+      "[ok] lore generation engine stable",
+
+      "[alert] holder morale irrationally high",
+
+      "[warn] common sense process terminated",
+
+      "[ok] no-rules subsystem verified",
+
+      "[alert] contract address remains TBA",
+
+      "[warn] X account remains TBA",
+
+      "[ok] total supply confirmed: 1,000,000,000",
+
+      "[alert] internet law #420 violated again",
+
+      "[ok] timeline takeover simulation running"
+
     ];
 
-    function rand(arr){
-      return arr[Math.floor(Math.random() * arr.length)];
+    /*
+      HELPERS
+    */
+
+    function randomItem(array){
+      return array[
+        Math.floor(
+          Math.random()
+          *
+          array.length
+        )
+      ];
     }
 
-    function addPopup(text){
-      const el = document.createElement("div");
-      el.className = "popup";
-      el.textContent = text;
-      document.body.appendChild(el);
-      setTimeout(() => el.remove(), 1400);
+    function showPopup(text){
+
+      const element =
+        document.createElement(
+          "div"
+        );
+
+      element.className =
+        "popup";
+
+      element.textContent =
+        text;
+
+      document.body.appendChild(
+        element
+      );
+
+      setTimeout(
+        () => element.remove(),
+        1400
+      );
+
     }
 
     function triggerFlash(){
-      flash.classList.add("show");
-      document.body.classList.add("shake");
-      setTimeout(() => {
-        flash.classList.remove("show");
-        document.body.classList.remove("shake");
-      }, 420);
+
+      flash.classList.add(
+        "show"
+      );
+
+      document.body.classList.add(
+        "shake"
+      );
+
+      setTimeout(
+        () => {
+
+          flash.classList.remove(
+            "show"
+          );
+
+          document.body.classList.remove(
+            "shake"
+          );
+
+        },
+        420
+      );
+
     }
 
     function updateCrime(){
-      crimeText.textContent = rand(crimes);
+
+      crimeText.textContent =
+        randomItem(
+          crimes
+        );
+
     }
 
     function updateName(){
-      const val = nameInput.value.trim();
-      wantedName.textContent = val ? val : "Your Name Here";
+
+      const value =
+        nameInput
+          .value
+          .trim();
+
+      wantedName.textContent =
+        value
+          ? value
+          : "Your Name Here";
+
     }
 
-    function addLog(msg){
-      const line = document.createElement("div");
-      line.className = "terminal-line";
-      line.innerHTML = `<span class="muted">root@lawless:~$</span> ${msg}`;
-      terminal.appendChild(line);
-      terminal.scrollTop = terminal.scrollHeight;
+    function addLog(message){
+
+      const line =
+        document.createElement(
+          "div"
+        );
+
+      line.className =
+        "terminal-line";
+
+      line.innerHTML =
+        `
+          <span class="muted">
+            root@lawless:~$
+          </span>
+          ${message}
+        `;
+
+      terminal.appendChild(
+        line
+      );
+
+      terminal.scrollTop =
+        terminal.scrollHeight;
+
     }
 
-    function chaos(){
-      lawsBroken += Math.floor(Math.random() * 30) + 9;
-      lawsBrokenEl.textContent = lawsBroken.toLocaleString("en-US");
-      heroNote.textContent = rand(heroNotes);
-      addLog(rand(terminalLogs));
+    /*
+      CHAOS MODE
+    */
+
+    function triggerChaos(){
+
+      lawsBroken +=
+        Math.floor(
+          Math.random()
+          *
+          30
+        )
+        +
+        9;
+
+      lawsBrokenEl.textContent =
+        lawsBroken.toLocaleString(
+          "en-US"
+        );
+
+      heroNote.textContent =
+        randomItem(
+          heroNotes
+        );
+
+      addLog(
+        randomItem(
+          terminalLogs
+        )
+      );
+
       triggerFlash();
-      addPopup("+1 CRIME COMMITTED");
+
+      showPopup(
+        "+1 CRIME COMMITTED"
+      );
+
     }
 
-    async function copyCA(){
-      try{
-        await navigator.clipboard.writeText(CONTRACT_ADDRESS);
-        heroNote.textContent = "Contract address copied. Deploy the propaganda.";
-        addPopup("CA COPIED");
-      }catch(e){
-        heroNote.textContent = "Clipboard blocked. Copy manually from the CA box.";
-        addPopup("COPY FAILED");
+    /*
+      TBA BUTTONS
+    */
+
+    function showTBA(type){
+
+      heroNote.textContent =
+        `${type} will be announced soon.`;
+
+      addLog(
+        `[info] ${type.toLowerCase()} status: TBA`
+      );
+
+      showPopup(
+        `${type} // TBA`
+      );
+
+    }
+
+    /*
+      EVENTS
+    */
+
+    breakBtn.addEventListener(
+      "click",
+      triggerChaos
+    );
+
+    chaosBtn.addEventListener(
+      "click",
+      triggerChaos
+    );
+
+    randomCrimeBtn.addEventListener(
+      "click",
+      updateCrime
+    );
+
+    applyNameBtn.addEventListener(
+      "click",
+      updateName
+    );
+
+    randomMsgBtn.addEventListener(
+      "click",
+      () => {
+
+        addLog(
+          randomItem(
+            terminalLogs
+          )
+        );
+
       }
-    }
+    );
 
-    breakBtn.addEventListener("click", chaos);
-    chaosBtn.addEventListener("click", chaos);
-    randomCrimeBtn.addEventListener("click", updateCrime);
-    applyNameBtn.addEventListener("click", updateName);
-    randomMsgBtn.addEventListener("click", () => addLog(rand(terminalLogs)));
-    copyBtn.addEventListener("click", copyCA);
-    copyCABtn.addEventListener("click", copyCA);
+    nameInput.addEventListener(
+      "keydown",
+      event => {
 
-    nameInput.addEventListener("keydown", (e) => {
-      if(e.key === "Enter") updateName();
-    });
+        if(
+          event.key ===
+          "Enter"
+        ){
+          updateName();
+        }
+
+      }
+    );
+
+    caStatusBtn.addEventListener(
+      "click",
+      () => {
+        showTBA(
+          "Contract Address"
+        );
+      }
+    );
+
+    launchBtn.addEventListener(
+      "click",
+      () => {
+        showTBA(
+          "Launch"
+        );
+      }
+    );
+
+    xBtn.addEventListener(
+      "click",
+      () => {
+        showTBA(
+          "X"
+        );
+      }
+    );
+
+    /*
+      INITIALIZE
+    */
 
     updateCrime();
+
   </script>
+
 </body>
 </html>
