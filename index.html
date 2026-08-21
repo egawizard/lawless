@@ -134,6 +134,8 @@ section{position:relative;z-index:3;padding:74px 0}
 .token-card span{display:block;color:var(--muted);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px}
 .token-card strong{display:block;font-family:Impact,sans-serif;font-size:clamp(2rem,4vw,3rem);line-height:.95;text-transform:uppercase}
 .token-card p{margin:14px 0 0;color:#d2cbd9;line-height:1.7}
+.ca-long{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace!important;font-size:clamp(.82rem,1.35vw,1.05rem)!important;line-height:1.45!important;word-break:break-all;text-transform:none!important}
+.ca-inline{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;word-break:break-all}
 
 /* manifesto */
 .duo{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
@@ -223,12 +225,12 @@ footer{position:relative;z-index:3;padding:28px 0 44px;color:var(--muted)}
       <h1 class="glitch" data-text="LAWLESS">LAWLESS</h1>
       <p class="lead">A meme-powered outlaw community built for people who were never interested in following the script. No corporate promises. No fake seriousness. Just characters, memes, lore, community, and beautiful internet chaos.</p>
       <div class="pills">
-        <span class="pill">1B Total Supply</span><span class="pill">Community Driven</span><span class="pill">Meme Powered</span><span class="pill">CA: TBA</span><span class="pill">X: TBA</span>
+        <span class="pill">1B Total Supply</span><span class="pill">Community Driven</span><span class="pill">Meme Powered</span><span class="pill">CA: LIVE</span><span class="pill">X: TBA</span>
       </div>
       <div class="actions">
         <a class="btn primary" href="#join">Join The Gang</a>
         <button class="btn chaos" id="breakBtn">Break The Law</button>
-        <button class="btn secondary" id="tbaBtn">CA: TBA</button>
+        <button class="btn secondary" id="copyCaBtn">Copy CA</button>
       </div>
       <div class="hero-note" id="heroNote">System status: outlaw energy stable.</div>
     </div>
@@ -243,8 +245,8 @@ footer{position:relative;z-index:3;padding:28px 0 44px;color:var(--muted)}
 
   <div class="ticker-wrap">
     <div class="ticker">
-      <span>LAWLESS • 1,000,000,000 SUPPLY • CA TBA • X TBA • BREAK THE LAW • COMMUNITY > NORMALITY • MEMES ARE FOREVER • NO RULES • JUST LORE •</span>
-      <span>LAWLESS • 1,000,000,000 SUPPLY • CA TBA • X TBA • BREAK THE LAW • COMMUNITY > NORMALITY • MEMES ARE FOREVER • NO RULES • JUST LORE •</span>
+      <span>LAWLESS • 1,000,000,000 SUPPLY • CA 0xb20000000000000000000025c0fe7962ff088101 • X TBA • BREAK THE LAW • COMMUNITY > NORMALITY • MEMES ARE FOREVER • NO RULES • JUST LORE •</span>
+      <span>LAWLESS • 1,000,000,000 SUPPLY • CA 0xb20000000000000000000025c0fe7962ff088101 • X TBA • BREAK THE LAW • COMMUNITY > NORMALITY • MEMES ARE FOREVER • NO RULES • JUST LORE •</span>
     </div>
   </div>
 </section>
@@ -258,7 +260,7 @@ footer{position:relative;z-index:3;padding:28px 0 44px;color:var(--muted)}
     <div class="stats">
       <div class="stat"><h3>Total Supply</h3><strong>1B</strong><p>1,000,000,000 LAWLESS. Clean. Simple. Memorable.</p></div>
       <div class="stat"><h3>Laws Broken</h3><strong id="lawsBroken">420,069</strong><p>This increases whenever somebody chooses chaos.</p></div>
-      <div class="stat"><h3>Contract</h3><strong>TBA</strong><p>The official CA will be published through official channels.</p></div>
+      <div class="stat"><h3>Contract</h3><strong>LIVE</strong><p class="ca-inline">0xb20000000000000000000025c0fe7962ff088101</p></div>
       <div class="stat"><h3>X / Twitter</h3><strong>TBA</strong><p>The official timeline account will be announced soon.</p></div>
     </div>
   </div>
@@ -295,7 +297,7 @@ footer{position:relative;z-index:3;padding:28px 0 44px;color:var(--muted)}
     </div>
     <div class="token-grid">
       <div class="token-card"><span>Total Supply</span><strong>1,000,000,000</strong><p>One billion LAWLESS tokens.</p></div>
-      <div class="token-card"><span>Contract Address</span><strong>TBA</strong><p>Always verify the official contract once the token is live.</p></div>
+      <div class="token-card"><span>Contract Address</span><strong class="ca-long">0xb20000000000000000000025c0fe7962ff088101</strong><p>Always verify the contract address through official LAWLESS channels.</p></div>
       <div class="token-card"><span>X / Twitter</span><strong>TBA</strong><p>The official account will be announced when the gang is ready.</p></div>
     </div>
   </div>
@@ -310,7 +312,7 @@ footer{position:relative;z-index:3;padding:28px 0 44px;color:var(--muted)}
         <div class="tline"><span class="muted">root@lawless:~$</span> initializing outlaw protocol...</div>
         <div class="tline"><span class="ok">[ok]</span> crew assets loaded: multiple variants</div>
         <div class="tline"><span class="ok">[ok]</span> total supply: 1,000,000,000</div>
-        <div class="tline"><span class="warn">[warn]</span> contract address: TBA</div>
+        <div class="tline"><span class="ok">[ok]</span> contract address: 0xb20000000000000000000025c0fe7962ff088101</div>
         <div class="tline"><span class="warn">[warn]</span> X account: TBA</div>
         <div class="tline"><span class="err">[alert]</span> excessive aura detected</div>
       </div>
@@ -364,7 +366,7 @@ footer{position:relative;z-index:3;padding:28px 0 44px;color:var(--muted)}
           <div class="tag">Join The Gang</div><h2>The timeline needs more outlaws.</h2>
           <p>LAWLESS is built to feel like a living internet character universe: recognizable, memeable, chaotic, and shaped by the community.</p>
           <div class="social-grid">
-            <div class="social"><span>Contract Address</span><strong>TBA</strong></div>
+            <div class="social"><span>Contract Address</span><strong class="ca-long">0xb20000000000000000000025c0fe7962ff088101</strong></div>
             <div class="social"><span>X / Twitter</span><strong>TBA</strong></div>
             <div class="social"><span>Total Supply</span><strong>1B LAWLESS</strong></div>
           </div>
@@ -376,9 +378,10 @@ footer{position:relative;z-index:3;padding:28px 0 44px;color:var(--muted)}
 </section>
 </main>
 
-<footer><div class="container foot"><span>© LAWLESS — Rules are temporary. Memes are forever.</span><span>Supply: 1B // CA: TBA // X: TBA</span></div></footer>
+<footer><div class="container foot"><span>© LAWLESS — Rules are temporary. Memes are forever.</span><span>Supply: 1B // CA: 0xb20000000000000000000025c0fe7962ff088101 // X: TBA</span></div></footer>
 
 <script>
+const CONTRACT_ADDRESS="0xb20000000000000000000025c0fe7962ff088101";
 const crimes=[
   "Possession of excessive aura.",
   "Being too early and suspiciously bullish.",
@@ -420,7 +423,16 @@ q("#breakBtn").onclick=chaos;q("#chaosBtn").onclick=chaos;q("#logBtn").onclick=(
 q("#crimeBtn").onclick=()=>q("#crimeText").textContent=rand(crimes);
 q("#nameBtn").onclick=()=>{q("#wantedName").textContent=q("#nameInput").value.trim()||"Your Name Here"};
 q("#nameInput").addEventListener("keydown",e=>{if(e.key==="Enter")q("#nameBtn").click()});
-q("#tbaBtn").onclick=()=>{q("#heroNote").textContent="Contract address will be announced soon.";popup("CA // TBA")};
+q("#copyCaBtn").onclick=async()=>{
+  try{
+    await navigator.clipboard.writeText(CONTRACT_ADDRESS);
+    q("#heroNote").textContent="Contract address copied to clipboard.";
+    popup("CA COPIED");
+  }catch(e){
+    q("#heroNote").textContent="Copy failed. Contract: "+CONTRACT_ADDRESS;
+    popup("COPY FAILED");
+  }
+};
 
 /* subtle hero parallax */
 const hv=q("#heroVisual");
